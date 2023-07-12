@@ -19,6 +19,7 @@ function MyComponent(/* x */ {name, age,addr, email,height}){
   )
 }
 
+
 //Props값이 넘어오지 않을 때 기본값의 선언
 /* 함수 밖에 컴포넌트 명.defaultProps = {} */
 MyComponent.defaultProps = {
