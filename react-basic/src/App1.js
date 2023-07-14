@@ -19,7 +19,7 @@ function App() {
             <li>5. JSX에서 if문을 사용하고 싶다면, if문 대신 3항연산자를 씁니다.</li>
             <li>6. 화면에서 보여주고 싶은게 없는 경우에는 null을 반환시킵니다.</li>
             <li>7. undefined를 반환하는 상황을 만들면 안됩니다.</li>
-            <li style={{backgroundColor : 'coral', color : 'aquamarine', fontSize: 20}}>8. DOM요소 (태그)에 스타일을 직접 넣을 때는 반드시 객체형으로 묶고 카멜 표기법을 사용합니다.</li>
+            <li style={{backgroundColor : 'coral', color : 'aquamarine', fontSize: 20}}>8. DOM요소 (태그)에 스타일을 직접 넣을 때는 반드시 객체형으로 묶고(키:값 형태로) 카멜 표기법을 사용합니다.</li>
             <li>9. class대신 className 속성을 사용합니다.</li>
             <li>10.HTML5의 문법을 정확하게 지킵니다. (홀로 사용되는 태그는 반드시 닫는 태그를 적습니다.)</li>
           </ul>
