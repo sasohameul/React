@@ -1,45 +1,37 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./component/Home";
-import Info from "./component/Info";
-import User from "./component/User";
-import Board from "./component/Board";
-import BoardContent from "./component/BoardContent";
-import Header from "./layout/Header";
-import MyPage from "./component/MyPage";
+import { useEffect } from "react";
 
-function App() {
-  return (
-    <Routes>
+function App(){
 
-      <Route element={<Header/>}>
-      <Route path="/" element={<Home/>}/>
-      {/* 쿼리스트링 */}
-      <Route path="/user" element={<User/>}/>
-      {/* 쿼리파라미터 - 추가설정 */}
-      <Route path="/info/:a/:b" element={<Info/>}/>
-      </Route>
-      {/* board, boardContent분기 */}
-{/* 
-    <Route path="/board" element={<Board/>}/>
-    <Route path="/board/:num" element={<BoardContent/>}/>
- */}
 
-{/* board의 자식 boardContent 중첩라우터 */}
-{/* outlet컴포넌트 추가 */}
-<Route path="/board" element={<Board/>}>
-<Route path=":num" element={<BoardContent/>}/>
-</Route>
+  useEffect(()=> {
 
-{/* navigate 컴포넌트 */}
-<Route path="mypage" element={<MyPage/>}/>
+    fetch('http://localhost:8181/api/v1/getInfo', {
+
+      method:"post",
+      headers:{"Content-Type" : "application/json"},
+
+      body:JSON.springify({"num" : 1, "name" : "리액트에서 보낸 데이터"})
+
+    })
+    .then(response => response.json())
+    .then(t => console.log(t))
+
+  }, []);
+
+return(
+
+<div>
+
+.....
+
+</div>
 
 
 
 
+)
 
 
-    </Routes>
-  );
 }
 
-export default App;
+export default App
